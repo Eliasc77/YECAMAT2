@@ -1,4 +1,4 @@
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'DM: Consumo de campos por área'
 @Metadata.allowExtensions: true
 define view entity ZC_DM_CAMPO_AREA

@@ -4,19 +4,10 @@ strict ( 2 );
 define behavior for ZI_DM_SOLICITUD alias Solicitud
 persistent table zdm_sol_cab
 lock master
-authorization master ( instance )
 etag master ModificadoTotalEl
 {
   create;
   update;
-
-  action ( features : instance ) ClasificarBpm parameter ZDM_A_CLASIFICAR_BPM result [1] $self;
-  action ( features : instance ) SolicitarCorreccion parameter ZDM_A_CORRECCION result [1] $self;
-  action ( features : instance ) AprobarYActivar result [1] $self;
-  action ( features : instance ) ReintentarIntegracion result [1] $self;
-  action ( features : instance ) Cancelar result [1] $self;
-
-  association _Tareas { }
 
   field ( readonly ) IdSolicitud, Estado, InicioParalelo, MaterialResultado,
                      CreadoPor, CreadoEl, ModificadoPor, ModificadoEl,

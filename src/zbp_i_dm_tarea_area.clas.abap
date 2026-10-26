@@ -1,0 +1,7 @@
+CLASS zbp_i_dm_tarea_area DEFINITION
+  PUBLIC ABSTRACT FINAL
+  FOR BEHAVIOR OF zi_dm_tarea_area.
+ENDCLASS.
+
+CLASS zbp_i_dm_tarea_area IMPLEMENTATION.
+ENDCLASS.

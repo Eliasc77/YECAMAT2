@@ -1,4 +1,4 @@
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'DM: Campo de tarea'
 define view entity ZI_DM_CAMPO_AREA
   as select from zdm_sol_campo

@@ -1,10 +1,8 @@
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'DM: Tarea de área'
 define root view entity ZI_DM_TAREA_AREA
   as select from zdm_sol_area
   composition [0..*] of ZI_DM_CAMPO_AREA as _Campos
-  association [1..1] to ZI_DM_SOLICITUD as _Solicitud
-    on $projection.IdSolicitud = _Solicitud.IdSolicitud
 {
   key id_solicitud       as IdSolicitud,
   key area               as Area,
@@ -19,7 +17,6 @@ define root view entity ZI_DM_TAREA_AREA
       modificado_por     as ModificadoPor,
       modificado_el      as ModificadoEl,
       modificado_total_el as ModificadoTotalEl,
-      _Solicitud,
       _Campos
 }
 

@@ -4,13 +4,9 @@ strict ( 2 );
 define behavior for ZI_DM_TAREA_AREA alias TareaArea
 persistent table zdm_sol_area
 lock master
-authorization master ( instance )
 etag master ModificadoTotalEl
 {
   update;
-  action ( features : instance ) GuardarProgreso result [1] $self;
-  action ( features : instance ) FinalizarTarea result [1] $self;
-
   association _Campos { create; }
 
   field ( readonly ) IdSolicitud, Area, Estado, Requerida,
@@ -38,7 +34,6 @@ etag master ModificadoTotalEl
 define behavior for ZI_DM_CAMPO_AREA alias CampoArea
 persistent table zdm_sol_campo
 lock dependent by _Tarea
-authorization dependent by _Tarea
 etag dependent by _Tarea
 {
   create;

@@ -1,0 +1,14 @@
+{
+  "BASEINFO": {
+    "FROM": [
+      "ZDM_SOL_CAMPO",
+      "ZI_DM_TAREA_AREA"
+    ],
+    "ASSOCIATED": [],
+    "BASE": [],
+    "ANNO_REF": [],
+    "SCALAR_FUNCTION": [],
+    "VERSION": 0,
+    "ANNOREF_EVALUATION_ERROR": ""
+  }
+}

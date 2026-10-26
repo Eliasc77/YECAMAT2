@@ -1,0 +1,24 @@
+{
+  "global": {
+    "files": "/src/**/*.*"
+  },
+  "dependencies": [
+    {
+      "url": "https://github.com/abaplint/deps",
+      "files": "/src/**/*.*",
+      "folder": "/deps"
+    }
+  ],
+  "syntax": {
+    "version": {
+      "release": "v758",
+      "language": "Cloud"
+    },
+    "errorNamespace": "^Z"
+  },
+  "rules": {
+    "parser_error": true,
+    "cds_parser_error": true,
+    "xml_consistency": true
+  }
+}

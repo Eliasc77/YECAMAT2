@@ -1,0 +1,7 @@
+CLASS zbp_i_dm_solicitud DEFINITION
+  PUBLIC ABSTRACT FINAL
+  FOR BEHAVIOR OF zi_dm_solicitud.
+ENDCLASS.
+
+CLASS zbp_i_dm_solicitud IMPLEMENTATION.
+ENDCLASS.

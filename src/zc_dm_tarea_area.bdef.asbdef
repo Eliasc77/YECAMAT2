@@ -4,8 +4,6 @@ strict ( 2 );
 define behavior for ZC_DM_TAREA_AREA alias TareaArea
 {
   use update;
-  use action GuardarProgreso;
-  use action FinalizarTarea;
   use association _Campos { create; }
 }
 

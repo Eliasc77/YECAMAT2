@@ -1,4 +1,4 @@
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'DM: Consumo de solicitudes'
 @Metadata.allowExtensions: true
 define root view entity ZC_DM_SOLICITUD
@@ -19,7 +19,6 @@ define root view entity ZC_DM_SOLICITUD
       CreadoEl,
       ModificadoPor,
       ModificadoEl,
-      ModificadoTotalEl,
-      _Tareas : redirected to ZC_DM_TAREA_AREA
+      ModificadoTotalEl
 }
 

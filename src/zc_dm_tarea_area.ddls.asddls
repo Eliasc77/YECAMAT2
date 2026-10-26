@@ -1,4 +1,4 @@
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'DM: Consumo de tareas por área'
 @Metadata.allowExtensions: true
 define root view entity ZC_DM_TAREA_AREA
@@ -18,7 +18,6 @@ define root view entity ZC_DM_TAREA_AREA
       ModificadoPor,
       ModificadoEl,
       ModificadoTotalEl,
-      _Solicitud : redirected to ZC_DM_SOLICITUD,
       _Campos : redirected to composition child ZC_DM_CAMPO_AREA
 }
 

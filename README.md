@@ -3,21 +3,33 @@
 Diseño técnico en español para gestionar solicitudes de creación, copia,
 modificación e inactivación de materiales con trabajo concurrente por áreas.
 
-## Alcance implementado
+## Alcance importable en SAP Trial
 
 - Modelo persistente separado por solicitud, tarea de área, valor de campo,
   configuración, auditoría y cola de integración.
 - Diseño RAP sin borrador para evitar que un *draft lock* bloquee a todas las
   áreas de una solicitud.
 - ETag independiente por tarea de área y actualización granular de valores.
-- Acciones de negocio para guardar progreso, finalizar, clasificar BPM,
-  solicitar corrección y aprobar.
+- BO RAP administrados para solicitudes y tareas concurrentes, con entidades
+  hijas de campos y control ETag.
 - Contrato de integración desacoplado para crear o modificar el material.
 - Arquitectura, estados, controles de acceso y estrategia de pruebas.
 
-El repositorio contiene fuentes de referencia listas para trasladar a un
-paquete ABAP mediante ADT. No se incluyen metadatos XML de abapGit porque deben
-generarse desde el sistema ABAP y el *software component* de destino.
+El repositorio está serializado en formato abapGit: incluye `.abapgit.xml`, el
+paquete, tablas DDIC, fuentes y metadatos XML. Puede vincularse desde la vista
+Git Repositories de ADT al paquete `YECMAT2` del componente `ZLOCAL`.
+
+Las acciones avanzadas del flujo están especificadas en la arquitectura y se
+incorporarán sobre esta base después de validar la primera activación en el
+release concreto del tenant Trial.
+
+## Importación
+
+1. Actualizar o volver a clonar el repositorio desde Git Repositories en ADT.
+2. Seleccionar la rama `main` y el paquete `YECMAT2`.
+3. Ejecutar Pull y activar los objetos pendientes si ADT no los activa en lote.
+4. Crear localmente un Service Binding OData V4 para `ZUI_DM_SOLICITUD`; los
+   bindings contienen datos dependientes del tenant y no se versionan aquí.
 
 ## Documentación
 
