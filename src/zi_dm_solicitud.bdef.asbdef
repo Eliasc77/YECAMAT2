@@ -4,6 +4,7 @@ strict ( 2 );
 define behavior for ZI_DM_SOLICITUD alias Solicitud
 persistent table zdm_sol_cab
 lock master
+authorization master ( global )
 etag master ModificadoTotalEl
 {
   create;

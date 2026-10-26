@@ -9,7 +9,6 @@ define behavior for ZC_DM_TAREA_AREA alias TareaArea
 
 define behavior for ZC_DM_CAMPO_AREA alias CampoArea
 {
-  use create;
   use update;
   use association _Tarea;
 }

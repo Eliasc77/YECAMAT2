@@ -4,6 +4,7 @@ strict ( 2 );
 define behavior for ZI_DM_TAREA_AREA alias TareaArea
 persistent table zdm_sol_area
 lock master
+authorization master ( global )
 etag master ModificadoTotalEl
 {
   update;
@@ -34,9 +35,9 @@ etag master ModificadoTotalEl
 define behavior for ZI_DM_CAMPO_AREA alias CampoArea
 persistent table zdm_sol_campo
 lock dependent by _Tarea
+authorization dependent by _Tarea
 etag dependent by _Tarea
 {
-  create;
   update;
   association _Tarea;
 
