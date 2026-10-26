@@ -10,7 +10,8 @@ etag master ModificadoTotalEl
   create;
   update;
 
-  field ( readonly ) IdSolicitud, Estado, InicioParalelo, MaterialResultado,
+  field ( readonly, numbering : managed ) IdSolicitud;
+  field ( readonly ) Estado, InicioParalelo, MaterialResultado,
                      CreadoPor, CreadoEl, ModificadoPor, ModificadoEl,
                      ModificadoTotalEl;
 

@@ -7,5 +7,12 @@ ENDCLASS.
 
 CLASS lhc_solicitud IMPLEMENTATION.
   METHOD get_global_authorizations.
+    IF requested_authorizations-%create = if_abap_behv=>mk-on.
+      result-%create = if_abap_behv=>auth-allowed.
+    ENDIF.
+
+    IF requested_authorizations-%update = if_abap_behv=>mk-on.
+      result-%update = if_abap_behv=>auth-allowed.
+    ENDIF.
   ENDMETHOD.
 ENDCLASS.
