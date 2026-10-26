@@ -16,6 +16,7 @@ etag master ModificadoTotalEl
   draft action Activate optimized;
   draft action Discard;
   draft action Resume;
+  draft determine action Prepare { }
 
   field ( readonly, numbering : managed ) IdSolicitud;
   field ( readonly ) Estado, InicioParalelo, MaterialResultado,
