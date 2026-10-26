@@ -28,8 +28,7 @@ release concreto del tenant Trial.
 1. Actualizar o volver a clonar el repositorio desde Git Repositories en ADT.
 2. Seleccionar la rama `main` y el paquete `YECMAT2`.
 3. Ejecutar Pull y activar los objetos pendientes si ADT no los activa en lote.
-4. Crear localmente un Service Binding OData V4 para `ZUI_DM_SOLICITUD`; los
-   bindings contienen datos dependientes del tenant y no se versionan aquí.
+4. Abrir `ZBD_DM_SOLICITUD`, verificar que esté publicado y ejecutar Preview.
 
 ## Documentación
 
