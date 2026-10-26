@@ -9,12 +9,70 @@
 }
 annotate view ZC_DM_SOLICITUD with
 {
-  @UI.facet: [ {
-    id: 'DatosGenerales',
-    type: #IDENTIFICATION_REFERENCE,
-    label: 'Datos generales',
-    position: 10
-  } ]
+  @UI.facet: [
+    {
+      id: 'DatosGenerales',
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Datos generales',
+      position: 10
+    },
+    {
+      id: 'CamposSolicitante',
+      type: #LINEITEM_REFERENCE,
+      label: 'Solicitante',
+      position: 20,
+      targetElement: '_Solicitante/_Campos'
+    },
+    {
+      id: 'CamposComercial',
+      type: #LINEITEM_REFERENCE,
+      label: 'Comercial',
+      position: 30,
+      targetElement: '_Comercial/_Campos'
+    },
+    {
+      id: 'CamposPcp',
+      type: #LINEITEM_REFERENCE,
+      label: 'Planeamiento (PCP)',
+      position: 40,
+      targetElement: '_Pcp/_Campos'
+    },
+    {
+      id: 'CamposRegulatorio',
+      type: #LINEITEM_REFERENCE,
+      label: 'Asuntos Regulatorios',
+      position: 50,
+      targetElement: '_Regulatorio/_Campos'
+    },
+    {
+      id: 'CamposContabilidad',
+      type: #LINEITEM_REFERENCE,
+      label: 'Contabilidad',
+      position: 60,
+      targetElement: '_Contabilidad/_Campos'
+    },
+    {
+      id: 'CamposLogistica',
+      type: #LINEITEM_REFERENCE,
+      label: 'Logística',
+      position: 70,
+      targetElement: '_Logistica/_Campos'
+    },
+    {
+      id: 'CamposCalidad',
+      type: #LINEITEM_REFERENCE,
+      label: 'Aseguramiento de Calidad',
+      position: 80,
+      targetElement: '_Calidad/_Campos'
+    },
+    {
+      id: 'CamposControlCalidad',
+      type: #LINEITEM_REFERENCE,
+      label: 'Control de Calidad',
+      position: 90,
+      targetElement: '_ControlCalidad/_Campos'
+    }
+  ]
   @UI: {
     lineItem:       [ { position: 10, importance: #HIGH } ],
     identification: [ { position: 10 } ]

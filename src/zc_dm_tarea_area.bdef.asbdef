@@ -3,6 +3,7 @@ strict ( 2 );
 
 define behavior for ZC_DM_TAREA_AREA alias TareaArea
 {
+  use create;
   use update;
   use association _Campos { create; }
 }

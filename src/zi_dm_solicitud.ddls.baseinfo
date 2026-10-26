@@ -3,7 +3,9 @@
     "FROM": [
       "ZDM_SOL_CAB"
     ],
-    "ASSOCIATED": [],
+    "ASSOCIATED": [
+      "ZI_DM_TAREA_AREA"
+    ],
     "BASE": [],
     "ANNO_REF": [],
     "SCALAR_FUNCTION": [],

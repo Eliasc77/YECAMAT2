@@ -3,7 +3,9 @@
     "FROM": [
       "ZI_DM_SOLICITUD"
     ],
-    "ASSOCIATED": [],
+    "ASSOCIATED": [
+      "ZC_DM_TAREA_AREA"
+    ],
     "BASE": [],
     "ANNO_REF": [],
     "SCALAR_FUNCTION": [],

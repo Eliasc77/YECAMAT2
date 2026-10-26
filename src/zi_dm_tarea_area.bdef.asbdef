@@ -7,11 +7,12 @@ lock master
 authorization master ( global )
 etag master ModificadoTotalEl
 {
+  create;
   update;
   association _Campos { create; }
 
-  field ( readonly ) IdSolicitud, Area, Estado, Requerida,
-                     HabilitadaEl, IniciadaEl, FinalizadaEl,
+  field ( mandatory ) IdSolicitud, Area;
+  field ( readonly ) Estado, Requerida, HabilitadaEl, IniciadaEl, FinalizadaEl,
                      ModificadoPor, ModificadoEl, ModificadoTotalEl;
 
   mapping for zdm_sol_area

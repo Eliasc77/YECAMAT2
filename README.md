@@ -35,6 +35,7 @@ release concreto del tenant Trial.
 
 - [Arquitectura](docs/arquitectura.md)
 - [Decisiones y trazabilidad](docs/trazabilidad.md)
+- [Matriz de campos por área](docs/matriz-campos-areas.md)
 - [Despliegue y pendientes](docs/despliegue.md)
 
 ## Estructura

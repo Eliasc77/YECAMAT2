@@ -19,6 +19,14 @@ define root view entity ZC_DM_SOLICITUD
       CreadoEl,
       ModificadoPor,
       ModificadoEl,
-      ModificadoTotalEl
+      ModificadoTotalEl,
+      _Solicitante   : redirected to ZC_DM_TAREA_AREA,
+      _Comercial     : redirected to ZC_DM_TAREA_AREA,
+      _Pcp           : redirected to ZC_DM_TAREA_AREA,
+      _Regulatorio   : redirected to ZC_DM_TAREA_AREA,
+      _Contabilidad  : redirected to ZC_DM_TAREA_AREA,
+      _Logistica     : redirected to ZC_DM_TAREA_AREA,
+      _Calidad       : redirected to ZC_DM_TAREA_AREA,
+      _ControlCalidad: redirected to ZC_DM_TAREA_AREA
 }
 
