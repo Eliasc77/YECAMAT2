@@ -13,7 +13,6 @@ define view entity ZC_DM_CAMPO_AREA
       Unidad,
       ModificadoPor,
       ModificadoEl,
-      ModificadoTotalEl,
       _Tarea : redirected to parent ZC_DM_TAREA_AREA
 }
 

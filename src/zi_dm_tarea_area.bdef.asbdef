@@ -42,7 +42,7 @@ etag dependent by _Tarea
   association _Tarea;
 
   field ( readonly ) IdSolicitud, Area, CampoTecnico, TipoDato,
-                     ModificadoPor, ModificadoEl, ModificadoTotalEl;
+                     ModificadoPor, ModificadoEl;
 
   mapping for zdm_sol_campo
   {
@@ -55,7 +55,6 @@ etag dependent by _Tarea
     Unidad            = unidad;
     ModificadoPor     = modificado_por;
     ModificadoEl      = modificado_el;
-    ModificadoTotalEl = modificado_total_el;
   }
 }
 

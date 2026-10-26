@@ -15,7 +15,6 @@ define view entity ZI_DM_CAMPO_AREA
       unidad             as Unidad,
       modificado_por     as ModificadoPor,
       modificado_el      as ModificadoEl,
-      modificado_total_el as ModificadoTotalEl,
       _Tarea
 }
 
