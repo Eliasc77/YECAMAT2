@@ -1,0 +1,76 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Solicitud',
+    typeNamePlural: 'Solicitudes',
+    title:       { type: #STANDARD, value: 'IdSolicitud' },
+    description: { type: #STANDARD, value: 'Estado' }
+  }
+}
+annotate view ZC_DM_SOLICITUD with
+{
+  @UI.facet: [ {
+    id: 'DatosGenerales',
+    type: #IDENTIFICATION_REFERENCE,
+    label: 'Datos generales',
+    position: 10
+  } ]
+  @UI: {
+    lineItem:       [ { position: 10, importance: #HIGH } ],
+    identification: [ { position: 10 } ]
+  }
+  IdSolicitud;
+
+  @UI: {
+    lineItem:       [ { position: 20, importance: #HIGH } ],
+    identification: [ { position: 20 } ],
+    selectionField: [ { position: 10 } ]
+  }
+  Operacion;
+
+  @UI: {
+    lineItem:       [ { position: 30, importance: #HIGH } ],
+    identification: [ { position: 30 } ],
+    selectionField: [ { position: 20 } ]
+  }
+  Material;
+
+  @UI: {
+    lineItem:       [ { position: 40, importance: #HIGH } ],
+    identification: [ { position: 40 } ],
+    selectionField: [ { position: 30 } ]
+  }
+  TipoMaterial;
+
+  @UI: {
+    lineItem:       [ { position: 50, importance: #HIGH } ],
+    identification: [ { position: 50 } ],
+    selectionField: [ { position: 40 } ]
+  }
+  Centro;
+
+  @UI: {
+    lineItem:       [ { position: 60, importance: #MEDIUM } ],
+    identification: [ { position: 60 } ]
+  }
+  Sociedad;
+
+  @UI: {
+    lineItem:       [ { position: 70, importance: #HIGH } ],
+    identification: [ { position: 70 } ],
+    selectionField: [ { position: 50 } ]
+  }
+  Estado;
+
+  @UI.identification: [ { position: 80 } ]
+  EsBpm;
+
+  @UI.identification: [ { position: 90 } ]
+  InicioParalelo;
+
+  @UI.identification: [ { position: 100 } ]
+  MaterialResultado;
+
+  @UI.hidden: true
+  ModificadoTotalEl;
+}

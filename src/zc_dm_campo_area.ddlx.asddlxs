@@ -1,0 +1,24 @@
+@Metadata.layer: #CUSTOMER
+annotate view ZC_DM_CAMPO_AREA with
+{
+  @UI.lineItem: [ { position: 10, importance: #HIGH } ]
+  CampoTecnico;
+
+  @UI.lineItem: [ { position: 20, importance: #HIGH } ]
+  Valor;
+
+  @UI.lineItem: [ { position: 30, importance: #MEDIUM } ]
+  TipoDato;
+
+  @UI.lineItem: [ { position: 40, importance: #LOW } ]
+  Moneda;
+
+  @UI.lineItem: [ { position: 50, importance: #LOW } ]
+  Unidad;
+
+  @UI.hidden: true
+  IdSolicitud;
+
+  @UI.hidden: true
+  Area;
+}

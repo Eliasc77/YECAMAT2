@@ -1,0 +1,73 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Tarea de área',
+    typeNamePlural: 'Tareas de área',
+    title:       { type: #STANDARD, value: 'Area' },
+    description: { type: #STANDARD, value: 'Estado' }
+  }
+}
+annotate view ZC_DM_TAREA_AREA with
+{
+  @UI.facet: [
+    {
+      id: 'DatosTarea',
+      type: #IDENTIFICATION_REFERENCE,
+      label: 'Datos de la tarea',
+      position: 10
+    },
+    {
+      id: 'CamposTarea',
+      type: #LINEITEM_REFERENCE,
+      label: 'Campos de interacción',
+      position: 20,
+      targetElement: '_Campos'
+    }
+  ]
+  @UI: {
+    lineItem:       [ { position: 10, importance: #HIGH } ],
+    identification: [ { position: 10 } ]
+  }
+  IdSolicitud;
+
+  @UI: {
+    lineItem:       [ { position: 20, importance: #HIGH } ],
+    identification: [ { position: 20 } ],
+    selectionField: [ { position: 10 } ]
+  }
+  Area;
+
+  @UI: {
+    lineItem:       [ { position: 30, importance: #HIGH } ],
+    identification: [ { position: 30 } ],
+    selectionField: [ { position: 20 } ]
+  }
+  Estado;
+
+  @UI: {
+    lineItem:       [ { position: 40, importance: #MEDIUM } ],
+    identification: [ { position: 40 } ]
+  }
+  Responsable;
+
+  @UI.identification: [ { position: 50 } ]
+  Requerida;
+
+  @UI.identification: [ { position: 60 } ]
+  HabilitadaEl;
+
+  @UI.identification: [ { position: 70 } ]
+  IniciadaEl;
+
+  @UI.identification: [ { position: 80 } ]
+  FinalizadaEl;
+
+  @UI.identification: [ { position: 90 } ]
+  VencimientoEl;
+
+  @UI.identification: [ { position: 100 } ]
+  MotivoCorreccion;
+
+  @UI.hidden: true
+  ModificadoTotalEl;
+}
