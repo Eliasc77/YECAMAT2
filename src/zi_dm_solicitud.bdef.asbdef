@@ -1,14 +1,21 @@
 managed implementation in class zbp_i_dm_solicitud unique;
 strict ( 2 );
+with draft;
 
 define behavior for ZI_DM_SOLICITUD alias Solicitud
 persistent table zdm_sol_cab
-lock master
+draft table zdm_sol_cab_d
+lock master total etag ModificadoEl
 authorization master ( global )
 etag master ModificadoTotalEl
 {
   create;
   update;
+
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
 
   field ( readonly, numbering : managed ) IdSolicitud;
   field ( readonly ) Estado, InicioParalelo, MaterialResultado,
