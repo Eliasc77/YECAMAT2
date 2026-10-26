@@ -11,7 +11,7 @@ etag master ModificadoTotalEl
 {
   create;
   update;
-  delete ( internal );
+//  delete ( internal );
 
   draft action Edit;
   draft action Activate optimized;
@@ -43,4 +43,3 @@ etag master ModificadoTotalEl
     ModificadoTotalEl = modificado_total_el;
   }
 }
-

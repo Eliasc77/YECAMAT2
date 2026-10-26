@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
@@ -43,6 +43,7 @@
      <INTLEN>000002</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000001</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>MATERIAL</FIELDNAME>
@@ -51,6 +52,7 @@
      <INTLEN>000080</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000040</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>SOCIEDAD</FIELDNAME>
@@ -59,6 +61,7 @@
      <INTLEN>000008</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000004</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>CENTRO</FIELDNAME>
@@ -67,6 +70,7 @@
      <INTLEN>000008</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000004</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>TIPO_MATERIAL</FIELDNAME>
@@ -75,6 +79,7 @@
      <INTLEN>000008</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000004</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>ES_BPM</FIELDNAME>
@@ -83,6 +88,7 @@
      <INTLEN>000002</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000001</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>ESTADO</FIELDNAME>
@@ -91,6 +97,7 @@
      <INTLEN>000040</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000020</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>INICIO_PARALELO</FIELDNAME>
@@ -105,6 +112,7 @@
      <INTLEN>000080</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000040</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>CREADO_POR</FIELDNAME>
@@ -140,4 +148,3 @@
   </asx:values>
  </asx:abap>
 </abapGit>
-

@@ -13,4 +13,3 @@ define behavior for ZC_DM_CAMPO_AREA alias CampoArea
   use update;
   use association _Tarea;
 }
-

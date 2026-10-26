@@ -16,4 +16,3 @@ INTERFACE zif_dm_repositorio PUBLIC.
   METHODS registrar_outbox
     IMPORTING id_solicitud TYPE sysuuid_x16.
 ENDINTERFACE.
-

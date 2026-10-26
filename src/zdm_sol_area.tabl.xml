@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
@@ -45,6 +45,7 @@
      <NOTNULL>X</NOTNULL>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000010</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>ESTADO</FIELDNAME>
@@ -53,6 +54,7 @@
      <INTLEN>000030</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000015</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>REQUERIDA</FIELDNAME>
@@ -61,6 +63,7 @@
      <INTLEN>000002</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000001</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>HABILITADA_EL</FIELDNAME>
@@ -93,6 +96,7 @@
      <INTLEN>000024</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000012</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>MOTIVO_CORRECCION</FIELDNAME>
@@ -101,6 +105,7 @@
      <INTLEN>000510</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000255</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>MODIFICADO_POR</FIELDNAME>
@@ -124,4 +129,3 @@
   </asx:values>
  </asx:abap>
 </abapGit>
-

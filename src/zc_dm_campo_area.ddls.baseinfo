@@ -1,14 +1,24 @@
 {
-  "BASEINFO": {
-    "FROM": [
-      "ZI_DM_CAMPO_AREA",
-      "ZC_DM_TAREA_AREA"
-    ],
-    "ASSOCIATED": [],
-    "BASE": [],
-    "ANNO_REF": [],
-    "SCALAR_FUNCTION": [],
-    "VERSION": 0,
-    "ANNOREF_EVALUATION_ERROR": ""
-  }
+"BASEINFO":
+{
+"FROM":
+[
+"ZI_DM_CAMPO_AREA"
+],
+"ASSOCIATED":
+[
+"ZC_DM_TAREA_AREA",
+"ZI_DM_TAREA_AREA"
+],
+"BASE":
+[
+"ZI_DM_CAMPO_AREA"
+],
+"ANNO_REF":
+[],
+"SCALAR_FUNCTION":
+[],
+"VERSION":0,
+"ANNOREF_EVALUATION_ERROR":""
+}
 }

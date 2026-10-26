@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <abapGit version="v1.0.0" serializer="LCL_OBJECT_TABL" serializer_version="v1.0.0">
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
@@ -45,6 +45,7 @@
      <NOTNULL>X</NOTNULL>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000010</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>CAMPO_TECNICO</FIELDNAME>
@@ -55,6 +56,7 @@
      <NOTNULL>X</NOTNULL>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000040</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>VALOR</FIELDNAME>
@@ -63,6 +65,7 @@
      <INTLEN>002048</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>001024</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>TIPO_DATO</FIELDNAME>
@@ -71,6 +74,7 @@
      <INTLEN>000020</INTLEN>
      <DATATYPE>CHAR</DATATYPE>
      <LENG>000010</LENG>
+     <MASK>  CHAR</MASK>
     </DD03P>
     <DD03P>
      <FIELDNAME>MONEDA</FIELDNAME>
@@ -106,4 +110,3 @@
   </asx:values>
  </asx:abap>
 </abapGit>
-

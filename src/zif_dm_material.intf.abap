@@ -11,4 +11,3 @@ INTERFACE zif_dm_material PUBLIC.
     IMPORTING id_solicitud TYPE sysuuid_x16
     RETURNING VALUE(resultado) TYPE ty_resultado.
 ENDINTERFACE.
-

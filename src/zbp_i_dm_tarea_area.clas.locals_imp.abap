@@ -15,8 +15,8 @@ CLASS lhc_tarea_area IMPLEMENTATION.
       result-%update = if_abap_behv=>auth-allowed.
     ENDIF.
 
-    IF requested_authorizations-%assoc-_Campos = if_abap_behv=>mk-on.
-      result-%assoc-_Campos = if_abap_behv=>auth-allowed.
-    ENDIF.
+*    IF requested_authorizations-%assoc-_Campos = if_abap_behv=>mk-on.
+*      result-%assoc-_Campos = if_abap_behv=>auth-allowed.
+*    ENDIF.
   ENDMETHOD.
 ENDCLASS.
