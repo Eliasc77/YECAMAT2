@@ -11,6 +11,7 @@ etag master ModificadoTotalEl
 {
   create;
   update;
+  delete ( internal );
 
   draft action Edit;
   draft action Activate optimized;
