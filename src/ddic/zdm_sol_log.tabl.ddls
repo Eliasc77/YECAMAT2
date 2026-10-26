@@ -1,0 +1,18 @@
+@EndUserText.label : 'DM: Auditoría inmutable'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zdm_sol_log {
+  key mandt              : abap.clnt not null;
+  key id_log             : sysuuid_x16 not null;
+  id_solicitud           : sysuuid_x16 not null;
+  area                   : abap.char(10);
+  accion                 : abap.char(20) not null;
+  campo_tecnico          : abap.char(40);
+  valor_anterior         : abap.sstring(1024);
+  valor_nuevo            : abap.sstring(1024);
+  usuario                : abp_creation_user;
+  registrado_el          : timestampl not null;
+}
+

@@ -1,0 +1,25 @@
+@AccessControl.authorizationCheck: #CHECK
+@EndUserText.label: 'DM: Solicitud'
+define root view entity ZI_DM_SOLICITUD
+  as select from zdm_sol_cab
+  association [0..*] to ZI_DM_TAREA_AREA as _Tareas
+    on $projection.IdSolicitud = _Tareas.IdSolicitud
+{
+  key id_solicitud      as IdSolicitud,
+      operacion         as Operacion,
+      material          as Material,
+      sociedad          as Sociedad,
+      centro            as Centro,
+      tipo_material     as TipoMaterial,
+      es_bpm            as EsBpm,
+      estado            as Estado,
+      inicio_paralelo   as InicioParalelo,
+      material_resultado as MaterialResultado,
+      creado_por        as CreadoPor,
+      creado_el         as CreadoEl,
+      modificado_por    as ModificadoPor,
+      modificado_el     as ModificadoEl,
+      modificado_total_el as ModificadoTotalEl,
+      _Tareas
+}
+

@@ -1,0 +1,65 @@
+managed implementation in class zbp_i_dm_tarea_area unique;
+strict ( 2 );
+
+define behavior for ZI_DM_TAREA_AREA alias TareaArea
+persistent table zdm_sol_area
+lock master
+authorization master ( instance )
+etag master ModificadoTotalEl
+{
+  update;
+  action ( features : instance ) GuardarProgreso result [1] $self;
+  action ( features : instance ) FinalizarTarea result [1] $self;
+
+  association _Campos { create; }
+
+  field ( readonly ) IdSolicitud, Area, Estado, Requerida,
+                     HabilitadaEl, IniciadaEl, FinalizadaEl,
+                     ModificadoPor, ModificadoEl, ModificadoTotalEl;
+
+  mapping for zdm_sol_area
+  {
+    IdSolicitud       = id_solicitud;
+    Area              = area;
+    Estado            = estado;
+    Requerida         = requerida;
+    HabilitadaEl      = habilitada_el;
+    IniciadaEl        = iniciada_el;
+    FinalizadaEl      = finalizada_el;
+    VencimientoEl     = vencimiento_el;
+    Responsable       = responsable;
+    MotivoCorreccion  = motivo_correccion;
+    ModificadoPor     = modificado_por;
+    ModificadoEl      = modificado_el;
+    ModificadoTotalEl = modificado_total_el;
+  }
+}
+
+define behavior for ZI_DM_CAMPO_AREA alias CampoArea
+persistent table zdm_sol_campo
+lock dependent by _Tarea
+authorization dependent by _Tarea
+etag dependent by _Tarea
+{
+  create;
+  update;
+  association _Tarea;
+
+  field ( readonly ) IdSolicitud, Area, CampoTecnico, TipoDato,
+                     ModificadoPor, ModificadoEl, ModificadoTotalEl;
+
+  mapping for zdm_sol_campo
+  {
+    IdSolicitud       = id_solicitud;
+    Area              = area;
+    CampoTecnico      = campo_tecnico;
+    Valor             = valor;
+    TipoDato          = tipo_dato;
+    Moneda            = moneda;
+    Unidad            = unidad;
+    ModificadoPor     = modificado_por;
+    ModificadoEl      = modificado_el;
+    ModificadoTotalEl = modificado_total_el;
+  }
+}
+

@@ -1,0 +1,15 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_DM_SOLICITUD alias Solicitud
+{
+  use create;
+  use update;
+  use action ClasificarBpm;
+  use action SolicitarCorreccion;
+  use action AprobarYActivar;
+  use action ReintentarIntegracion;
+  use action Cancelar;
+  use association _Tareas;
+}
+

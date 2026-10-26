@@ -1,0 +1,19 @@
+@EndUserText.label : 'DM: Valor de campo por tarea'
+@AbapCatalog.enhancement.category : #NOT_EXTENSIBLE
+@AbapCatalog.tableCategory : #TRANSPARENT
+@AbapCatalog.deliveryClass : #A
+@AbapCatalog.dataMaintenance : #RESTRICTED
+define table zdm_sol_campo {
+  key mandt              : abap.clnt not null;
+  key id_solicitud       : sysuuid_x16 not null;
+  key area               : abap.char(10) not null;
+  key campo_tecnico      : abap.char(40) not null;
+  valor                  : abap.sstring(1024);
+  tipo_dato              : abap.char(10) not null;
+  moneda                 : abap.cuky;
+  unidad                 : abap.unit(3);
+  modificado_por         : abp_lastchange_user;
+  modificado_el          : abp_lastchange_tstmpl;
+  modificado_total_el    : abp_locinst_lastchange_tstmpl;
+}
+

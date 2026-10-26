@@ -1,0 +1,7 @@
+@EndUserText.label: 'DM: Servicio de solicitudes de material'
+define service ZUI_DM_SOLICITUD {
+  expose ZC_DM_SOLICITUD  as Solicitudes;
+  expose ZC_DM_TAREA_AREA as TareasArea;
+  expose ZC_DM_CAMPO_AREA as CamposArea;
+}
+

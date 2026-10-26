@@ -1,0 +1,18 @@
+projection;
+strict ( 2 );
+
+define behavior for ZC_DM_TAREA_AREA alias TareaArea
+{
+  use update;
+  use action GuardarProgreso;
+  use action FinalizarTarea;
+  use association _Campos { create; }
+}
+
+define behavior for ZC_DM_CAMPO_AREA alias CampoArea
+{
+  use create;
+  use update;
+  use association _Tarea;
+}
+

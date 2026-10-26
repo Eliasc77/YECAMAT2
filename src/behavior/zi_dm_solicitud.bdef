@@ -1,0 +1,44 @@
+managed implementation in class zbp_i_dm_solicitud unique;
+strict ( 2 );
+
+define behavior for ZI_DM_SOLICITUD alias Solicitud
+persistent table zdm_sol_cab
+lock master
+authorization master ( instance )
+etag master ModificadoTotalEl
+{
+  create;
+  update;
+
+  action ( features : instance ) ClasificarBpm parameter ZDM_A_CLASIFICAR_BPM result [1] $self;
+  action ( features : instance ) SolicitarCorreccion parameter ZDM_A_CORRECCION result [1] $self;
+  action ( features : instance ) AprobarYActivar result [1] $self;
+  action ( features : instance ) ReintentarIntegracion result [1] $self;
+  action ( features : instance ) Cancelar result [1] $self;
+
+  association _Tareas { }
+
+  field ( readonly ) IdSolicitud, Estado, InicioParalelo, MaterialResultado,
+                     CreadoPor, CreadoEl, ModificadoPor, ModificadoEl,
+                     ModificadoTotalEl;
+
+  mapping for zdm_sol_cab
+  {
+    IdSolicitud       = id_solicitud;
+    Operacion         = operacion;
+    Material          = material;
+    Sociedad          = sociedad;
+    Centro            = centro;
+    TipoMaterial      = tipo_material;
+    EsBpm             = es_bpm;
+    Estado            = estado;
+    InicioParalelo    = inicio_paralelo;
+    MaterialResultado = material_resultado;
+    CreadoPor         = creado_por;
+    CreadoEl          = creado_el;
+    ModificadoPor     = modificado_por;
+    ModificadoEl      = modificado_el;
+    ModificadoTotalEl = modificado_total_el;
+  }
+}
+
