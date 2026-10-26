@@ -4,7 +4,8 @@
       "ZI_DM_SOLICITUD"
     ],
     "ASSOCIATED": [
-      "ZC_DM_TAREA_AREA"
+      "ZC_DM_TAREA_AREA",
+      "ZC_DM_CAMPO_AREA"
     ],
     "BASE": [],
     "ANNO_REF": [],

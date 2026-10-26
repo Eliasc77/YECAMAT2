@@ -26,6 +26,30 @@ define root view entity ZI_DM_SOLICITUD
   association [0..1] to ZI_DM_TAREA_AREA as _ControlCalidad
     on  $projection.IdSolicitud = _ControlCalidad.IdSolicitud
     and _ControlCalidad.Area = 'CC'
+  association [0..*] to ZI_DM_CAMPO_AREA as _CamposSolicitante
+    on  $projection.IdSolicitud = _CamposSolicitante.IdSolicitud
+    and _CamposSolicitante.Area = 'SOLIC'
+  association [0..*] to ZI_DM_CAMPO_AREA as _CamposComercial
+    on  $projection.IdSolicitud = _CamposComercial.IdSolicitud
+    and _CamposComercial.Area = 'COM'
+  association [0..*] to ZI_DM_CAMPO_AREA as _CamposPcp
+    on  $projection.IdSolicitud = _CamposPcp.IdSolicitud
+    and _CamposPcp.Area = 'PCP'
+  association [0..*] to ZI_DM_CAMPO_AREA as _CamposRegulatorio
+    on  $projection.IdSolicitud = _CamposRegulatorio.IdSolicitud
+    and _CamposRegulatorio.Area = 'AR'
+  association [0..*] to ZI_DM_CAMPO_AREA as _CamposContabilidad
+    on  $projection.IdSolicitud = _CamposContabilidad.IdSolicitud
+    and _CamposContabilidad.Area = 'CONT'
+  association [0..*] to ZI_DM_CAMPO_AREA as _CamposLogistica
+    on  $projection.IdSolicitud = _CamposLogistica.IdSolicitud
+    and _CamposLogistica.Area = 'LOG'
+  association [0..*] to ZI_DM_CAMPO_AREA as _CamposCalidad
+    on  $projection.IdSolicitud = _CamposCalidad.IdSolicitud
+    and _CamposCalidad.Area = 'AS'
+  association [0..*] to ZI_DM_CAMPO_AREA as _CamposControlCalidad
+    on  $projection.IdSolicitud = _CamposControlCalidad.IdSolicitud
+    and _CamposControlCalidad.Area = 'CC'
 {
   key id_solicitud      as IdSolicitud,
       operacion         as Operacion,
@@ -49,6 +73,14 @@ define root view entity ZI_DM_SOLICITUD
       _Contabilidad,
       _Logistica,
       _Calidad,
-      _ControlCalidad
+      _ControlCalidad,
+      _CamposSolicitante,
+      _CamposComercial,
+      _CamposPcp,
+      _CamposRegulatorio,
+      _CamposContabilidad,
+      _CamposLogistica,
+      _CamposCalidad,
+      _CamposControlCalidad
 }
 
